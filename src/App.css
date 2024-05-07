@@ -1,0 +1,53 @@
+#root{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}
+
+.contador{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 15px;
+  background-color: greenyellow;
+}
+
+.botonera{
+  display: flex;
+  flex-direction: row;
+}
+
+.valor{
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.boton{
+  padding: 10px 15px;
+  width: 30px;
+  margin: 10x;
+  text-align: center;
+  background-color: coral;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.listacontadores{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.titulo{
+  font-size: 18px;
+  text-align: center;
+  width: 100px;
+}
