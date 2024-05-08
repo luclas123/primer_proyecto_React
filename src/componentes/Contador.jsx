@@ -15,6 +15,9 @@ sumar(){
 multiplicar(){
   this.setState({valor: this.state.valor *2})
 }
+dividir(){
+  this.setState({valor: this.state.valor /2})
+}
  
   render(){
     return(
@@ -28,6 +31,8 @@ multiplicar(){
           accion={()=> this.sumar()} />
           <Boton simbolo='*'
           accion={()=> this.multiplicar()} />
+          <Boton simbolo='/'
+          accion={()=> this.dividir()} />
 
          </div>
       </div>
