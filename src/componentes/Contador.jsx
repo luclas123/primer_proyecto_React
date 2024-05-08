@@ -29,9 +29,9 @@ dividir(){
           accion={()=> this.restar()}/>
           <Boton simbolo='+'
           accion={()=> this.sumar()} />
-          <Boton simbolo='*'
+          <Boton simbolo='x2'
           accion={()=> this.multiplicar()} />
-          <Boton simbolo='/'
+          <Boton simbolo='/2'
           accion={()=> this.dividir()} />
 
          </div>
