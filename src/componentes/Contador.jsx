@@ -18,6 +18,9 @@ multiplicar(){
 dividir(){
   this.setState({valor: this.state.valor /2})
 }
+
+
+}
  
   render(){
     return(
@@ -33,9 +36,11 @@ dividir(){
           accion={()=> this.multiplicar()} />
           <Boton simbolo='/2'
           accion={()=> this.dividir()} />
+          <Boton simbolo='x'
+          accion={()=> this.eliminar()}/>
 
          </div>
       </div>
     )
   }
-}
+
