@@ -9,13 +9,15 @@ export default class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      contadores: []
+      contadores: {nombre:nombre,
+        valor:valor
+      }
     }
   }
 
-  guardar(nombre){
+  guardar(nombre, valor){
     let nuevosContadores = this.state.contadores;
-    nuevosContadores.push(nombre);
+    nuevosContadores.push(nombre, valor);
     this.setState({contadores: nuevosContadores});
   }
 
@@ -32,7 +34,8 @@ export default class App extends Component{
     return(
         <div className='contenedor'>
        <Formulario
-       guardar={(nombre)=> this.guardar(nombre)}
+       guardar={(nombre, valor)=> this.guardar(nombre, valor)}
+      
        />
       <div className='listacontadores'>
         {this.state.contadores.map((cont, index)=>
