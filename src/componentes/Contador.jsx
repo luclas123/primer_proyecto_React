@@ -4,7 +4,7 @@ import Boton from './Boton';
 export default class Contador extends Component{
 constructor(props){
   super(props);
-  // this.state={valor: 2}
+  this.state = {valor: props.valorInicial}
 }
 restar(){
   this.setState({valor: this.state.valor -1})
@@ -13,10 +13,10 @@ sumar(){
  this.setState({valor: this.state.valor +1 })
 }
 multiplicar(){
-  this.setState({valor: this.state.valor *2})
+  this.setState({valor: this.state.valor * this.props.valorInicial})
 }
 dividir(){
-  this.setState({valor: this.state.valor /2})
+  this.setState({valor: this.state.valor / this.props.valorInicial})
 }
 
 
@@ -35,7 +35,7 @@ render(){
         <Boton simbolo='/2'
         accion={()=> this.dividir()} />
         <Boton simbolo='x'
-        accion={()=> this.eliminar()}/>
+        accion={()=> this.props.eliminar()}/>
 
        </div>
     </div>

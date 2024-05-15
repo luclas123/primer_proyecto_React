@@ -24,8 +24,7 @@ export default class Formulario extends Component{
                 placeholder="valor"
                 value={this.state.valor}
                 onChange={(e)=> this.setState({valor:e.target.value})}/>
-                <Boton accion={()=>this.props.guardar(this.state.nombre)
-                } simbolo="Guardar"/>
+                <Boton accion={()=>this.props.guardar(this.state.nombre, Number(this.state.valor))} simbolo="Guardar"/>
     
             </div>
         )

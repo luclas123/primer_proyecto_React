@@ -9,15 +9,15 @@ export default class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      contadores: {nombre:nombre,
-        valor:valor
-      }
+      contadores: [{nombre:'',
+        valor:''
+      }]
     }
   }
 
   guardar(nombre, valor){
     let nuevosContadores = this.state.contadores;
-    nuevosContadores.push(nombre, valor);
+    nuevosContadores.push({ nombre, valor });
     this.setState({contadores: nuevosContadores});
   }
 
@@ -38,13 +38,18 @@ export default class App extends Component{
       
        />
       <div className='listacontadores'>
-        {this.state.contadores.map((cont, index)=>
+        {this.state.contadores.map((cont, index)=>{
 
-<Contador key={index}>{cont}</Contador>
-        )}
+<Contador 
+key={index}
+nombre={cont.nombre}
+valorInicial={cont.valor}
+eliminar={()=> this.eliminar(index)}>
+</Contador>
+         })}
 
       </div>
         </div>
-    )
+  )
   }
 }
